@@ -11,5 +11,7 @@ namespace DatoriumBank.Data.Managers.Interface
         public void UpdateAccount(Account account);
 
         //CRUD -> Create(Add) Read(Get) Update Delete
+
+        public void DeleteAccount(int id);
     }
 }
