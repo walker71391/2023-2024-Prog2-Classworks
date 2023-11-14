@@ -1,6 +1,8 @@
 ﻿
 using DatoriumBank.Business;
 using DatoriumBank.Data;
+using DatoriumBank.Data.Entity;
+using DatoriumBank.Data.Managers;
 
 public class Program
 {
@@ -30,6 +32,13 @@ public class Program
         var accountManager = new AccountManager(bankDbContext);
         accountManager.AddAccount(account);
         var accountFromDb = accountManager.GetAccount(account.Id);
-        Console.WriteLine($"{accountFromDb.Client.Name} {accountFromDb.IBAN}");
+        Console.WriteLine($"Konts pēc pievienošanas {accountFromDb.Client.Name} {accountFromDb.IBAN}");
+
+        account.Name = "Izklaides konts";
+        accountManager.UpdateAccount(accountFromDb);
+        Console.WriteLine($"Konts pēc Update {accountFromDb.Client.Name} {accountFromDb.IBAN}");
+
+        var newAccountFromDb = accountManager.GetAccount(account.Id);
+        Console.WriteLine($"Updateotais konts no datubāzes pēc Update {newAccountFromDb.Client.Name} {newAccountFromDb.IBAN} {newAccountFromDb.Name}");
     }
 }
