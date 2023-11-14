@@ -1,4 +1,5 @@
-﻿using DatoriumBank.Data.Entity;
+﻿
+using DatoriumBank.Data.Entity;
 
 namespace DatoriumBank.Data.Managers.Interface
 {

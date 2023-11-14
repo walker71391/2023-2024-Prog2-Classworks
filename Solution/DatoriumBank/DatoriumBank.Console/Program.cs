@@ -32,13 +32,14 @@ public class Program
         var accountManager = new AccountManager(bankDbContext);
         accountManager.AddAccount(account);
         var accountFromDb = accountManager.GetAccount(account.Id);
-        Console.WriteLine($"Konts pēc pievienošanas {accountFromDb.Client.Name} {accountFromDb.IBAN}");
+        Console.WriteLine($"Konts pēc pievienošanas {accountFromDb.Client.Name} {accountFromDb.IBAN} {accountFromDb.Name}");
 
-        account.Name = "Izklaides konts";
+        accountFromDb.Name = "Izklaides konts";
         accountManager.UpdateAccount(accountFromDb);
-        Console.WriteLine($"Konts pēc Update {accountFromDb.Client.Name} {accountFromDb.IBAN}");
+        Console.WriteLine($"Konts pēc Update {accountFromDb.Client.Name} {accountFromDb.IBAN} {accountFromDb.Name}");
 
         var newAccountFromDb = accountManager.GetAccount(account.Id);
-        Console.WriteLine($"Updateotais konts no datubāzes pēc Update {newAccountFromDb.Client.Name} {newAccountFromDb.IBAN} {newAccountFromDb.Name}");
+        Console.WriteLine($"Update'otais konts no datubāzes pēc Update {newAccountFromDb.Client.Name} {newAccountFromDb.IBAN} {newAccountFromDb.Name}");
+
     }
 }

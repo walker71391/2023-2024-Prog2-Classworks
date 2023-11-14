@@ -1,4 +1,5 @@
-﻿using DatoriumBank.Data.Entity;
+﻿
+using DatoriumBank.Data.Entity;
 
 namespace DatoriumBank.Data.Managers.Interface
 {
@@ -8,5 +9,7 @@ namespace DatoriumBank.Data.Managers.Interface
         public Account GetAccount(int id);
 
         public void UpdateAccount(Account account);
+
+        //CRUD -> Create(Add) Read(Get) Update Delete
     }
 }
