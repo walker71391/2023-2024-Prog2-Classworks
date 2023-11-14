@@ -1,11 +1,13 @@
-﻿
 using DatoriumBank.Data.Entity;
+using System.Collections.Generic;
 
 namespace DatoriumBank.Data.Managers.Interface
 {
     public interface IUserManager
     {
-        public void AddClient(Client client);
-        public List<Client> GetClients(string name);
+        void AddClient(Client client);
+        List<Client> GetClients(string name);
+        void UpdateClient(Client client);
+        void DeleteClient(int clientId);
     }
 }
