@@ -3,7 +3,11 @@
     "",
     "\\Solution",
     "\\Solution\\DatoriumBank",
-    "\\Solution\\DatoriumBank\\DatoriumBank.Console"
+    "\\Solution\\DatoriumBank\\DatoriumBank.Console",
+    "\\Solution\\DatoriumBank\\DatoriumBank.Data",
+    "\\Solution\\DatoriumBank\\DatoriumBank.Data\\Entity",
+    "\\Solution\\DatoriumBank\\DatoriumBank.Data\\Managers",
+    "\\Solution\\DatoriumBank\\DatoriumBank.Data\\Managers\\Interface"
   ],
   "SelectedNode": "\\Solution\\DatoriumBank\\DatoriumBank.Console\\Program.cs",
   "PreviewInSolutionExplorer": false
